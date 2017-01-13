@@ -1,6 +1,70 @@
+@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*
+* screen.scss------------------------对主页的样式设置
+*
+* variable.scss----------------------对变量的集中管理
+*
+* mixin.scss-------------------------对mixin文件的集中管理
+* 
+*   
+*/
 
-@import "compass/reset";
+@import "compass/reset"
+	   ,"variable"
+	   ,"mixin";
+.main-sec{
+	font-family: $main-sec;
+	.headline{
+		font:{
+			family:$main-sec;
+			size:16px;
+		}
+		&:hover {
+			color: #993D3D;
+		}
+	@at-root{ 
+		.detail{
+			font-size: 12px; 
+		}
+     }//使用root 使detail类在css中置顶
+	}
+}
+
+
+p{
+  color:hsl(270,100%,50%);
+}
+
+
+.webdemo-sec{
+	
+	@include col-6(); 
+    &:hover{
+    	color:#f5f5f5;
+    }
+}
+
+.webdemo-sec-pra{
+	@include col();//与mixin语句配合使用 完成语句复用 默认为50%
+}
+.error.instrusion{
+ background: url('/image/bg.png');
+}
+
+.error{
+	color:#f00;
+}
+%error{
+	font-size: 20px;
+} //%e表示该样式仅用于extend 实现代码复用
+
+.serious-error{
+	@extend .error,%error;
+	//使用extend指令 明确使serious-error继承error的样式
+//其实就是讲包含error的样式 全用serious-error代替重新生成一遍 完成代码复用 便于管理
+	border:1px red solid;
+}

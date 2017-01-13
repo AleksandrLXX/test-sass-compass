@@ -1,7 +1,17 @@
+@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*
+* screen.scss------------------------对主页的样式设置
+*
+* variable.scss----------------------对变量的集中管理
+*
+* mixin.scss-------------------------对mixin文件的集中管理
+* 
+*   
+*/
 /* line 5, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -65,4 +75,62 @@ a img {
 /* line 116, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
+}
+
+/* line 19, ../sass/screen.scss */
+.main-sec {
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+/* line 21, ../sass/screen.scss */
+.main-sec .headline {
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  font-size: 16px;
+}
+/* line 26, ../sass/screen.scss */
+.main-sec .headline:hover {
+  color: #993D3D;
+}
+/* line 30, ../sass/screen.scss */
+.detail {
+  font-size: 12px;
+}
+
+/* line 38, ../sass/screen.scss */
+p {
+  color: #8000ff;
+}
+
+/* line 43, ../sass/screen.scss */
+.webdemo-sec {
+  width: 50%;
+  float: left;
+}
+/* line 46, ../sass/screen.scss */
+.webdemo-sec:hover {
+  color: #f5f5f5;
+}
+
+/* line 51, ../sass/screen.scss */
+.webdemo-sec-pra {
+  width: 50%;
+}
+
+/* line 54, ../sass/screen.scss */
+.error.instrusion, .instrusion.serious-error {
+  background: url("/image/bg.png");
+}
+
+/* line 58, ../sass/screen.scss */
+.error, .serious-error {
+  color: #f00;
+}
+
+/* line 61, ../sass/screen.scss */
+.serious-error {
+  font-size: 20px;
+}
+
+/* line 65, ../sass/screen.scss */
+.serious-error {
+  border: 1px red solid;
 }

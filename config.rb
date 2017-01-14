@@ -1,6 +1,8 @@
 require 'compass/import-once/activate'
+require 'compass-normalize' 
 # Require any additional compass plugins here.
-
+#这些文件既可以在同名文件夹下 也可以在ruby的gem下载目录下
+#因为这个本身就是ruby文件 
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "stylesheets"

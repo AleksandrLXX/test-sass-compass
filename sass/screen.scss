@@ -13,9 +13,26 @@
 *   
 */
 
-@import "compass/reset"
-	   ,"variable"
-	   ,"mixin";
+// @import "compass/reset";
+@import  "variable"
+	       ,"mixin";
+// @import "normalize-version","normalize/base";
+// 使用normalize来代替reset 只是用narmalize-里的base
+@import "compass/layout/grid-background";
+@import "compass/layout/sticky-footer";
+@import "compass/layout/stretching";
+@import "compass/css3";
+//由于compass组件全由mixin组成 不经include引用无法形成css
+@debug browsers();
+.strech-full{
+	@include stretch();
+}
+.test-inline-block{
+	@include inline-block();//使用css3模块来跨平台兼容inline-block
+}
+.test-inline-opacity{
+	@include opacity(0.3);//使用css3模块来跨平台兼容opacity
+}
 .main-sec{
 	font-family: $main-sec;
 	.headline{

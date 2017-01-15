@@ -1,0 +1,13 @@
+@charset "UTF-8";
+@import "compass/utilities/sprites";
+
+$logo-sprite-dimensions:true;
+
+@import "logo/*.png"; //compass 会帮我们magic import 一个sass文件，compass sprite “logo/*.png”
+
+
+@include all-logo-sprites();  //compass 合图 中间默认为文件夹名
+
+.main-logo{
+	@include logo-sprite("164151");
+}
